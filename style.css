@@ -1,6 +1,22 @@
 body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background: url('img/background.jpg') fixed;
+    color: #DDD;
+}
+
+hr {
+    border-color: #CC66FF
+}
+
+.btn {
+    background: rgba(0,0,0,0);
+    border: thin solid #CC66FF;
+}
+
+.btn:hover {
+    background: #CC66FF;
+    color: #000;
 }
 
 .register.row button {
@@ -24,13 +40,13 @@ body {
 }
 
 .follow .facebook {
-    color: #3B5998;
+    color: #CC66FF;
 }
 
 .follow .email {
-    color: #AA0000;
+    color: #CC66FF;
 }
 
 .follow .mailing-list {
-    color: #4DA64D;
+    color: #CC66FF;
 }
