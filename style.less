@@ -5,7 +5,7 @@ body {
   padding-top: @nav-bar-height;
   background: #2B2B2B url('img/background.jpg') no-repeat fixed center @nav-bar-height;
   font-size: 16px;
-  color: white;
+  color: @gray;
   max-width: 1200px;
   margin: auto;
   box-sizing: border-box;
@@ -27,11 +27,11 @@ body {
 }
 
 .jumbotron {
-  color: @gray;
   opacity: 0.75;
 }
 
 .content {
+  color: white;
   text-align: center;
   .col-sm-6 {
     max-width: 360px;  /* Prevent lines from being too long on tablet */
@@ -53,28 +53,33 @@ body {
 }
 
 .bottom {
-  background-color: #FFF;
+  background-color: white;
   width: 100%;
-  color: @gray;
   text-align: center;
-  padding-bottom: 20px;
   max-width: 1200px;
-
-  a i {
-    padding-left: 7px;
-    font-size: large;;
-  }
-
-  .fa-facebook-official {
-    color: #3B5998;
-  }
-
-  .fa-envelope {
-    color: #777;
-  }
 
   hr {
     border-color: #CCC;
+  }
+
+  footer {
+    .social {
+      margin-top: 5px;
+      margin-bottom: 24px;
+      i {
+        padding-left: 7px;
+        font-size: 24px;
+      }
+      .facebook {
+        color: #3B5998;
+      }
+      .email {
+        color: #777;
+      }
+      .linkedin {
+        color: #000;
+      }
+    }
   }
 }
 
