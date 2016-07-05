@@ -1,5 +1,6 @@
 $(function() {
     $('nav a').smoothScroll({
-        preventDefault: true
+        preventDefault: true,
+        offset: -50
     });
 });

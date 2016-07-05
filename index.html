@@ -30,7 +30,9 @@
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li><a href="#about">About</a></li>
+                <li><a href="#sponsors">Sponsors</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <!--
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -43,6 +45,7 @@
                         <li><a href="#">One more separated link</a></li>
                     </ul>
                 </li>
+                -->
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#register">Register</a></li>
@@ -59,7 +62,7 @@
     </div>
 </div>
 
-<div class="content">
+<div id="about" class="content">
     <div class="container">
         <!-- Example row of columns -->
         <div class="row">
@@ -118,14 +121,33 @@
     </div>
 </div>
 
-<div id="bottom" class="container">
-    <h2>Sponsors</h2>
-    <p>Here be sponsors</p>
+<div class="bottom container">
+    <h2 id="sponsors">Sponsors</h2>
+    <div class="sponsors">
+        <div class="row">
+            <div class="col-sm-3">
+                <a href="http://google.com">
+                    <img class="google" src="img/google.png"></a>
+            </div>
+            <div class="col-sm-3">
+                <a href="http://www.ntst.com/">
+                    <img class="ntst" src="img/ntst.png"></a>
+            </div>
+            <div class="col-sm-3">
+                <a href="http://studentaffairs.stonybrook.edu/caps/index.html">
+                    <img class="caps" src="img/caps.png"></a>
+            </div>
+            <div class="col-sm-3">
+                <a href="http://studentaffairs.stonybrook.edu/rec/">
+                    <img class="campus_rec" src="img/campus_rec.jpg"></a>
+            </div>
+        </div>
+    </div>
 
     <hr>
 
     <footer>
-        <p>
+        <p id="contact">
             <a href="http://www3.cs.stonybrook.edu/~wics/">Women in Computer Science</a>
             at Stony Brook University
             <a href="https://www.facebook.com/groups/sbuwics/">
