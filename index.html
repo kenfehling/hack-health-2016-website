@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Hack Health</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.7.2/jquery.smooth-scroll.min.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -54,7 +54,6 @@
     </div>
 </nav>
 
-<!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
     <div class="container">
         <h1>Hack Health 2016</h1>
@@ -64,7 +63,6 @@
 
 <div id="about" class="content">
     <div class="container">
-        <!-- Example row of columns -->
         <div class="row">
             <div class="col-sm-6">
                 <h2>Who</h2>
@@ -105,7 +103,7 @@
 
         <div class="register row">
             <div class="col-md-12" style="text-align:center">
-                <h2 id="register">Register for Hack Health 2016</h2>
+                <h2 id="register">Register for Hack Health</h2>
                 <button class="btn btn-primary" type="button">Register to Hack</button>
                 <button class="btn btn-success" type="button">Register to Mentor</button>
                 <!--
@@ -147,14 +145,23 @@
     <hr>
 
     <footer>
-        <p id="contact">
-            <a href="http://www3.cs.stonybrook.edu/~wics/">Women in Computer Science</a>
-            at Stony Brook University
-            <a href="https://www.facebook.com/groups/sbuwics/">
-                <i title="Facebook" class="fa fa-facebook-official" aria-hidden="true"></i></a>
-            <a href="mailto:sbu.wics@gmail.com">
-                <i title="Email" class="fa fa-envelope" aria-hidden="true"></i></a>
-        </p>
+        <div id="contact">
+            <div class="hidden-xs">
+                <a href="http://www3.cs.stonybrook.edu/~wics/">Women in Computer Science</a>
+                at Stony Brook University
+                <a href="https://www.facebook.com/groups/sbuwics/">
+                    <i title="Facebook" class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                <a href="mailto:sbu.wics@gmail.com">
+                    <i title="Email" class="fa fa-envelope" aria-hidden="true"></i></a>
+            </div>
+            <div class="visible-xs-block">
+                <a href="http://www3.cs.stonybrook.edu/~wics/">WiCS</a> at SBU
+                <a href="https://www.facebook.com/groups/sbuwics/">
+                    <i title="Facebook" class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                <a href="mailto:sbu.wics@gmail.com">
+                    <i title="Email" class="fa fa-envelope" aria-hidden="true"></i></a>
+            </div>
+        </div>
     </footer>
 </div>
 
