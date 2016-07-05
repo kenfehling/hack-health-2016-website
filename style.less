@@ -1,0 +1,84 @@
+@base-color: #F11;
+@gray: #2B2B2B;
+
+body {
+  padding-top: 50px;
+  background: #2B2B2B url('img/background.jpg') no-repeat fixed center;
+  font-size: 16px;
+  color: white;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  .jumbotron .container, .content .container {
+    max-width: 730px;
+  }
+}
+
+.nav {
+  font-size: 14px;
+}
+
+/*
+h2 {
+  text-align: center;
+}
+*/
+
+.jumbotron {
+  color: @gray;
+}
+
+.register.row button {
+  margin: 20px 5px 36px 5px;
+}
+
+.follow.row>* {
+  padding-bottom: 20px;
+}
+
+#bottom {
+  background-color: #FFF;
+  width: 100%;
+  color: @gray;
+  text-align: center;
+  padding-bottom: 10px;
+  max-width: 1200px;
+
+  a i {
+    padding-left: 7px;
+    font-size: large;;
+  }
+
+  .fa-facebook-official {
+    color: #3B5998;
+  }
+
+  .fa-envelope {
+    color: #777;
+  }
+}
+
+/*
+hr {
+  border-color: @base-color;
+}
+
+a, a:hover {
+  color: @base-color;
+}
+
+.btn {
+  background: rgba(0,0,0,0);
+  border: 2px solid @base-color;
+  color: @base-color;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: @base-color;
+  color: #000;
+}
+*/
