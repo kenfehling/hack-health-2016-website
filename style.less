@@ -1,9 +1,9 @@
-@base-color: #F11;
 @gray: #2B2B2B;
+@nav-bar-height: 50px;
 
 body {
-  padding-top: 50px;  /* to account for nav bar height */
-  background: #2B2B2B url('img/background.jpg') no-repeat fixed center;
+  padding-top: @nav-bar-height;
+  background: #2B2B2B url('img/background.jpg') no-repeat fixed center @nav-bar-height;
   font-size: 16px;
   color: white;
   max-width: 1200px;
@@ -35,6 +35,7 @@ h2 {
 
 .content {
   text-align: center;
+
 }
 
 .register.row button {
@@ -50,7 +51,7 @@ h2 {
   width: 100%;
   color: @gray;
   text-align: center;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   max-width: 1200px;
 
   a i {
@@ -76,25 +77,3 @@ h2 {
     margin: 10px;
   }
 }
-
-/*
-hr {
-  border-color: @base-color;
-}
-
-a, a:hover {
-  color: @base-color;
-}
-
-.btn {
-  background: rgba(0,0,0,0);
-  border: 2px solid @base-color;
-  color: @base-color;
-  font-weight: bold;
-}
-
-.btn:hover {
-  background: @base-color;
-  color: #000;
-}
-*/
