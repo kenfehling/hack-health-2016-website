@@ -17,6 +17,7 @@ function setupForm($form, path, callback) {
     //    e.preventDefault();
     //});
     $form.ajaxForm(options);
+    $form.validate();
 }
 
 $(function() {
