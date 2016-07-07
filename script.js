@@ -17,7 +17,20 @@ function setupForm($form, path, callback) {
     //    e.preventDefault();
     //});
     $form.ajaxForm(options);
-    $form.validate();
+    $form.validate({
+        rules: {
+            resume: {
+                required: true,
+                extension: 'pdf'
+
+            }
+        },
+        messages: {
+            resume:{
+                required: "Select a PDF file"
+            }
+        }
+    });
 }
 
 $(function() {
