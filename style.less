@@ -1,9 +1,10 @@
 @gray: #2B2B2B;
 @nav-bar-height: 50px;
+@background-offset: -50px;
 
 body {
   padding-top: @nav-bar-height;
-  background: #2B2B2B url('img/background.jpg') no-repeat fixed center @nav-bar-height;
+  background: #2B2B2B url('img/background.jpg') no-repeat fixed center @nav-bar-height + @background-offset;
   font-size: 16px;
   color: @gray;
   max-width: 1200px;
@@ -33,21 +34,25 @@ body {
 .content {
   color: white;
   text-align: center;
+  padding-bottom: 36px;
+
   .col-sm-6 {
     max-width: 360px;  /* Prevent lines from being too long on tablet */
     margin: auto;
   }
 
   .wwww {
-    margin-bottom: 26px;
+    .row>div {
+      margin-bottom: 26px;
+    }
   }
 
   .register.row {
     h2 {
-      margin-top: 8px;
+      margin-top: 12px;
     }
     button {
-      margin: 12px 5px 36px 5px;
+      margin: 8px;
     }
   }
 }
@@ -93,4 +98,20 @@ body {
     max-height: 75px;
     margin: 10px;
   }
+}
+
+#registerModal .tab-content {
+  padding: 20px;
+}
+
+
+/** Prevent modal from hiding scroll bar **/
+
+.modal-open {
+  overflow-y: scroll;
+}
+
+body {
+  padding-right: 0 !important;
+  overflow-y: scroll;
 }
