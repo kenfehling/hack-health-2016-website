@@ -1,5 +1,12 @@
-var API_HOST = 'https://hackhealth.herokuapp.com';
-//var API_HOST = 'http://127.0.0.1:5000';
+var API_HOST = function() {
+    var host = window.location.host;
+    if (host.indexOf('localhost') !== -1 || host.indexOf('127.0.0.1') !== -1) {
+        return 'http://localhost:5000';
+    }
+    else {
+        return 'https://hackhealth.herokuapp.com';
+    }
+}();
 
 function setupForm($form, path, callback) {
     var options = {
