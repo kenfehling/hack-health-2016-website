@@ -15,7 +15,6 @@ body {
   background-size: cover;
   font-size: 16px;
   color: @text-color;
-  max-width: @width;
   margin: auto;
   box-sizing: border-box;
 }
@@ -62,6 +61,10 @@ body {
   }
 }
 
+h2 {
+  margin-top: 30px;
+}
+
 .full-weight {
   font-weight: bold;
 }
@@ -87,20 +90,16 @@ body {
   }
 
   .register.row {
-    h2 {
-      margin-top: 12px;
-    }
     button {
       margin: 8px;
     }
   }
 }
 
-.schedule, .bottom {
+.bottom {
   background-color: @off-white;
   width: 100%;
   text-align: center;
-  max-width: @width;
 
   hr {
     border-color: @divider-color
@@ -110,7 +109,7 @@ body {
 .schedule {
   table {
     border-spacing: 0;
-    margin: auto;
+    margin: 0 auto 30px auto;
 
     td {
       padding: 4px 8px;
