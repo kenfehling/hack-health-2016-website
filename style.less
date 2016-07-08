@@ -2,7 +2,7 @@
 @nav-bg-color: #A77;
 @nav-text-color: darken(@nav-bg-color, 40%);
 @nav-text-hover-color: darken(@nav-text-color, 15%);
-@off-white: lighten(@nav-bg-color, 30%);
+@off-white: lighten(@nav-bg-color, 32%);
 @divider-color: darken(@off-white, 12%);
 @default-bg-color: #622;
 @nav-bar-height: 50px;
@@ -27,8 +27,8 @@ body {
 }
 
 .navbar {
-  background-image: linear-gradient(to bottom, lighten(@nav-bg-color, 13%) 0, darken(@nav-bg-color, 13%) 100%);
-  border-color: darken(@nav-bg-color, 26%);
+  background-image: linear-gradient(to bottom, lighten(@nav-bg-color, 12%) 0, darken(@nav-bg-color, 12%) 100%);
+  border-color: darken(@nav-bg-color, 24%);
 
   .navbar-header, .nav>li {
     font-size: 14px;
@@ -70,7 +70,7 @@ h2 {
 }
 
 .jumbotron {
-  opacity: 0.5;
+  opacity: 0.55;
 }
 
 .content {
@@ -136,7 +136,7 @@ h2 {
         color: #777;
       }
       .linkedin {
-        color: #000;
+        color: #111;
       }
     }
   }
@@ -165,7 +165,7 @@ h2 {
   }
   .subtitle {
     font-size: small;
-    color: #333;
+    color: lighten(@text-color, 10%);
   }
   .under-label {
     margin-top: 6px;
