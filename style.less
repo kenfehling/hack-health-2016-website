@@ -157,24 +157,25 @@ body {
   }
 }
 
-#registerModal .tab-content {
-  padding: 20px;
+.modal-content {
+  background-color: lighten(@nav-bg-color, 20%);
 }
 
 .register-form {
+  padding: 20px;
   .title {
     font-weight: bold;
     margin-top: 18px;
   }
   .subtitle {
     font-size: small;
-    color: #777;
+    color: #333;
   }
   .under-label {
     margin-top: 6px;
   }
   .number-input {
-    width: 4em;
+    width: 5em;
   }
   .submit-btn-container {
     text-align: center;
@@ -183,7 +184,7 @@ body {
 }
 
 .error {
-  color:#FF0000;
+  color:#F00;
 }
 
 /** Prevent modal from hiding scroll bar **/
