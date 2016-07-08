@@ -2,13 +2,16 @@
 @nav-bg-color: #A99;
 @nav-text-color: darken(@nav-bg-color, 40%);
 @nav-text-hover-color: darken(@nav-text-color, 15%);
+@off-white: lighten(@nav-bg-color, 30%);
+@divider-color: darken(@off-white, 12%);
+@default-bg-color: #622;
 @nav-bar-height: 50px;
 @background-offset: -50px;
 @width: 100%;
 
 body {
   padding-top: @nav-bar-height;
-  background: #622 url('img/background.jpg') fixed center @nav-bar-height + @background-offset;
+  background: @default-bg-color url('img/background.jpg') fixed center @nav-bar-height + @background-offset;
   background-size: cover;
   font-size: 16px;
   color: @text-color;
@@ -68,7 +71,7 @@ body {
 }
 
 .content {
-  color: white;
+  color: @off-white;
   text-align: center;
   padding-bottom: 36px;
 
@@ -94,13 +97,13 @@ body {
 }
 
 .schedule, .bottom {
-  background-color: white;
+  background-color: @off-white;
   width: 100%;
   text-align: center;
   max-width: @width;
 
   hr {
-    border-color: #CCC;
+    border-color: @divider-color
   }
 }
 
@@ -112,14 +115,14 @@ body {
     td {
       padding: 4px 8px;
       text-align: left;
-      border: thin solid gray;
+      border: thin solid lighten(@nav-bg-color, 15%);
     }
 
     td:first-child {
-      background-color: #F5E9ED;
+      background-color: lighten(@nav-bg-color, 15%);
     }
     td:last-child {
-      background-color: #FAF1D4;
+
     }
   }
 }
