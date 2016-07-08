@@ -1,13 +1,17 @@
-@gray: #2B2B2B;
+@text-color: #2B2B2B;
+@nav-text-color: #333;
+@nav-bg-color: #A99;
 @nav-bar-height: 50px;
 @background-offset: -50px;
+@width: 100%;
 
 body {
   padding-top: @nav-bar-height;
-  background: #2B2B2B url('img/background.jpg') no-repeat fixed center @nav-bar-height + @background-offset;
+  background: #622 url('img/background.jpg') fixed center @nav-bar-height + @background-offset;
+  background-size: cover;
   font-size: 16px;
-  color: @gray;
-  max-width: 1200px;
+  color: @text-color;
+  max-width: @width;
   margin: auto;
   box-sizing: border-box;
 }
@@ -19,8 +23,21 @@ body {
   }
 }
 
-.nav {
-  font-size: 14px;
+.navbar {
+  background-image: linear-gradient(to bottom, lighten(@nav-bg-color, 10%) 0, darken(@nav-bg-color, 10%) 100%);
+  border-color: darken(@nav-bg-color, 20%);
+
+  .navbar-header, .nav>li {
+    font-size: 14px;
+
+    >a {
+      color: @nav-text-color;
+    }
+  }
+
+  .nav {
+    font-size: 14px;
+  }
 }
 
 .full-weight {
@@ -28,7 +45,7 @@ body {
 }
 
 .jumbotron {
-  opacity: 0.75;
+  opacity: 0.5;
 }
 
 .content {
@@ -61,7 +78,7 @@ body {
   background-color: white;
   width: 100%;
   text-align: center;
-  max-width: 1200px;
+  max-width: @width;
 
   hr {
     border-color: #CCC;
