@@ -1,6 +1,7 @@
 @text-color: #2B2B2B;
-@nav-text-color: #333;
 @nav-bg-color: #A99;
+@nav-text-color: darken(@nav-bg-color, 40%);
+@nav-text-hover-color: darken(@nav-text-color, 15%);
 @nav-bar-height: 50px;
 @background-offset: -50px;
 @width: 100%;
@@ -35,12 +36,26 @@ body {
     }
 
     >a:hover {
-      color: #000;
+      color: @nav-text-hover-color;
     }
   }
 
   .nav {
     font-size: 14px;
+  }
+
+  .navbar-toggle {
+    border-color: @nav-text-color;
+    .icon-bar {
+      background-color: @nav-text-color;
+    }
+  }
+
+  .navbar-toggle:hover {
+    background-color: @nav-text-color;
+    .icon-bar {
+      background-color: @nav-bg-color;
+    }
   }
 }
 
