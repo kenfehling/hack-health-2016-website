@@ -34,9 +34,9 @@ function setupForm($form, path, callback) {
 }
 
 $(function() {
-    $("nav a").smoothScroll({
+    $("a").smoothScroll({
         preventDefault: true,
-        offset: -50  // to account for nav bar height
+        offset: -70  // to account for nav bar height + a little extra
     });
 
     setupForm($('.register-form'), '/register', function(response) {
