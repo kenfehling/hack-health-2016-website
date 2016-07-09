@@ -4,6 +4,7 @@
 @nav-text-hover-color: darken(@nav-text-color, 15%);
 @off-white: lighten(@nav-bg-color, 32%);
 @divider-color: darken(@off-white, 12%);
+@link-color: #199FCB;
 @default-bg-color: #622;
 @nav-bar-height: 50px;
 @background-offset: -50px;
@@ -67,6 +68,10 @@ body {
   background-color: #EFF;
 }
 
+a, a:hover {
+  color: @link-color;
+}
+
 h2 {
   margin-top: 30px;
 }
@@ -122,14 +127,35 @@ h2 {
   }
 }
 
+.sponsors {
+  margin: 20px 0 10px 0;
+  img {
+    min-width: 50px;
+    max-width: 150px;
+    min-height: 50px;
+    max-height: 75px;
+    margin: 10px;
+  }
+}
+
 .bottom {
+  .sponsor-us, footer {
+    font-weight: 600;
+  }
+  .sponsor-us {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
   footer {
+    .logo {
+      margin: 24px 0 6px 0;
+    }
     .social {
-      margin-top: 5px;
+      margin-top: 9px;
       margin-bottom: 24px;
       i {
-        padding-left: 7px;
-        font-size: 24px;
+        padding: 0 6px;
+        font-size: 30px;
       }
       .facebook {
         color: #3B5998;
@@ -141,17 +167,6 @@ h2 {
         color: #111;
       }
     }
-  }
-}
-
-.sponsors {
-  margin-top: 20px;
-  img {
-    min-width: 50px;
-    max-width: 150px;
-    min-height: 50px;
-    max-height: 75px;
-    margin: 10px;
   }
 }
 
