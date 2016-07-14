@@ -11,11 +11,9 @@ var API_HOST = function() {
 function setupForm($form, path, callback) {
     var options = {
         url: API_HOST + path,
-        success: callback
+        success: callback,
+        beforeSubmit: function() { return $form.valid(); }
     };
-    //$form.on('submit', function(e) {
-    //    e.preventDefault();
-    //});
     $form.ajaxForm(options);
     $form.validate({
         rules: {
@@ -40,7 +38,14 @@ $(function() {
     });
 
     setupForm($('.register-form'), '/register', function(response) {
-        console.log(response);
+        if (response.success) {
+            $('#registerModal').toggle();
+        }
+        else {
+            var $error = $('#registration-error');
+            $error.text(response.error);
+            $error.css('display', 'block');
+        }
     });
 
     // Wake up Heroku
