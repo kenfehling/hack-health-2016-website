@@ -39,7 +39,7 @@ $(function() {
 
     setupForm($('.register-form'), '/register', function(response) {
         if (response.success) {
-            $('#registerModal').toggle();
+            $('#registerModal').modal('hide');
         }
         else {
             var $error = $('#registration-error');
