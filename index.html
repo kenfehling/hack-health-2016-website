@@ -250,20 +250,22 @@
 <div id="registerModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
+            <h3>Register for HackHealth 2016</h3>
             <div>
                 <form role="form" method="post" class="register-form">
                     <div class="form-group">
-                        <label for="name">Name:</label>
+                        <label for="name">Name</label>
                         <input autofocus type="text" class="form-control" id="name" name="name" required aria-required="true">
                     </div>
                     <div class="form-group">
-                        <label for="email">Email address:</label>
+                        <label for="email">Email address</label>
                         <input type="email" class="form-control" id="email" name="email" required aria-required="true">
                     </div>
                     <div class="form-group">
-                        <label for="resume">Resume (PDF):</label>
+                        <label for="resume">Resume (PDF format)</label>
                         <input type="file" class="form-control" id="resume" name="resume" required aria-required="true">
                     </div>
+                    <hr>
                     <fieldset>
                         <div class="title">Gender</div>
                         <div class="radio">
@@ -280,6 +282,7 @@
                         </div>
                         <label for="gender" class="error" style="display:none;"></label>
                     </fieldset>
+                    <hr>
                     <fieldset>
                         <div class="title">Year</div>
                         <div class="radio">
@@ -299,6 +302,7 @@
                         </div>
                         <label for="year" class="error" style="display:none;"></label>
                     </fieldset>
+                    <hr>
                     <fieldset>
                     <div class="title">T-Shirt Size</div>
                         <div class="radio">
@@ -318,6 +322,7 @@
                         </div>
                         <label for="tshirt" class="error" style="display:none;"></label>
                     </fieldset>
+                    <hr>
                     <fieldset>
                         <div class="title">Is this your first Hackathon?</div>
                         <div class="radio">
@@ -328,8 +333,9 @@
                         </div>
                         <label for="first_hackathon" class="error" style="display:none;"></label>
                     </fieldset>
-                    <div class="title">If not, how many have you been to?</div>
+                    <div class="title2">If not, how many have you been to?</div>
                     <input type="text" class="form-control number-input under-label" maxlength="4" name="num_hackathons">
+                    <hr>
                     <fieldset>
                         <div class="title">Will your hack have a health theme?</div>
                         <div class="radio">
@@ -352,6 +358,7 @@
                         </div>
                         <label for="theme" class="error" style="display:none;"></label>
                     </fieldset>
+                    <hr>
                     <div class="title">What do you want to work on?</div>
                     <div class="subtitle">Be as specific or general as you want</div>
                     <input type="text" class="form-control under-label" name="idea" maxlength="140">

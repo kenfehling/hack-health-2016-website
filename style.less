@@ -3,6 +3,8 @@
 @nav-text-color: darken(@nav-bg-color, 40%);
 @nav-text-hover-color: darken(@nav-text-color, 15%);
 @off-white: lighten(@nav-bg-color, 32%);
+@modal-bg-color: lighten(@nav-bg-color, 25%);
+@modal-divider-color: lighten(@nav-bg-color, 12%);
 @divider-color: darken(@off-white, 12%);
 @link-color: #199FCB;
 @default-bg-color: #622;
@@ -171,13 +173,27 @@ h2 {
 }
 
 .modal-content {
-  background-color: lighten(@nav-bg-color, 22%);
+  background-color: @modal-bg-color;
+  padding: 20px;
+  h3 {
+    text-align: center;
+    margin: 5px 0 15px 0;
+    font-weight: bold;
+  }
 }
 
 .register-form {
-  padding: 20px;
-  .title {
+  hr {
+    border-color: @modal-divider-color;
+  }
+  div.radio {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  .title, .title2 {
     font-weight: bold;
+  }
+  .title2 {
     margin-top: 18px;
   }
   .subtitle {
