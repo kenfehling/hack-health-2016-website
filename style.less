@@ -173,13 +173,30 @@ h2 {
 }
 
 .modal-content {
-  background-color: @modal-bg-color;
-  padding: 20px;
   h3 {
     text-align: center;
     margin: 5px 0 15px 0;
     font-weight: bold;
   }
+}
+
+#register-modal, #confirm-modal {
+  .modal-content {
+    padding: 20px;
+  }
+}
+
+#register-modal .modal-content {
+  background-color: @modal-bg-color;
+}
+
+#confirm-modal .modal-content {
+  background-color: #99FF99;
+  text-align: center;
+}
+
+#directions-modal .modal-content {
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .register-form {

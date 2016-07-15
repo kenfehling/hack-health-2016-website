@@ -1,3 +1,6 @@
+/* jshint strict: true  */
+/* globals $ */
+
 var API_HOST = function() {
     var host = window.location.host;
     if (host.indexOf('localhost') !== -1 || host.indexOf('127.0.0.1') !== -1) {
@@ -39,7 +42,8 @@ $(function() {
 
     setupForm($('.register-form'), '/register', function(response) {
         if (response.success) {
-            $('#registerModal').modal('hide');
+            $('#register-modal').modal('hide');
+            $('#confirm-modal').modal();
         }
         else {
             var $error = $('#registration-error');
