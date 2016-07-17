@@ -2,10 +2,12 @@
 @nav-bg-color: #A77;
 @nav-text-color: darken(@nav-bg-color, 40%);
 @nav-text-hover-color: darken(@nav-text-color, 15%);
-@off-white: lighten(@nav-bg-color, 32%);
+@wwww-text-color: #D6D6D6;
+@schedule-bg-color: lighten(@nav-bg-color, 15%);
+@bottom-divider-color: lighten(@schedule-bg-color, 10%);
+@bottom-bg-color: lighten(@nav-bg-color, 33%);
 @modal-bg-color: lighten(@nav-bg-color, 25%);
 @modal-divider-color: lighten(@nav-bg-color, 12%);
-@divider-color: darken(@off-white, 12%);
 @link-color: #199FCB;
 @default-bg-color: #622;
 @nav-bar-height: 50px;
@@ -83,9 +85,13 @@ h2 {
 }
 
 .content {
-  color: @off-white;
+  color: @wwww-text-color;
   text-align: center;
   padding-bottom: 36px;
+
+  hr {
+    border-color: @wwww-text-color;
+  }
 
   .col-sm-6 {
     max-width: 360px;  /* Prevent lines from being too long on tablet */
@@ -100,12 +106,12 @@ h2 {
 }
 
 .bottom {
-  background-color: @off-white;
+  background-color: @bottom-bg-color;
   width: 100%;
   text-align: center;
 
   hr {
-    border-color: @divider-color
+    border-color: @bottom-divider-color
   }
 }
 
@@ -116,11 +122,11 @@ h2 {
 
     td {
       text-align: left;
-      border: thin solid lighten(@nav-bg-color, 15%);
+      border: thin solid @schedule-bg-color;
     }
 
     td:first-child {
-      background-color: lighten(@nav-bg-color, 15%);
+      background-color: @schedule-bg-color;
       padding: 5px 10px 5px 14px;
     }
     td:last-child {
