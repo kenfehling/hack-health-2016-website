@@ -1,3 +1,6 @@
+/* jshint strict: true  */
+/* globals $ */
+
 var API_HOST = function() {
     var host = window.location.host;
     if (host.indexOf('localhost') !== -1 || host.indexOf('127.0.0.1') !== -1) {
@@ -11,11 +14,9 @@ var API_HOST = function() {
 function setupForm($form, path, callback) {
     var options = {
         url: API_HOST + path,
-        success: callback
+        success: callback,
+        beforeSubmit: function() { return $form.valid(); }
     };
-    //$form.on('submit', function(e) {
-    //    e.preventDefault();
-    //});
     $form.ajaxForm(options);
     $form.validate({
         rules: {
@@ -40,7 +41,15 @@ $(function() {
     });
 
     setupForm($('.register-form'), '/register', function(response) {
-        console.log(response);
+        if (response.success) {
+            $('#register-modal').modal('hide');
+            $('#confirm-modal').modal();
+        }
+        else {
+            var $error = $('#registration-error');
+            $error.text(response.error);
+            $error.css('display', 'block');
+        }
     });
 
     // Wake up Heroku

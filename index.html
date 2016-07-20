@@ -14,7 +14,8 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.7.2/jquery.smooth-scroll.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.js"></script>
-    <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+    <script src="//jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
+    <script src="//jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
@@ -58,7 +59,7 @@
                 -->
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a data-toggle="modal" role="button" data-target="#registerModal">Register</a></li>
+                <li><a data-toggle="modal" role="button" data-target="#register-modal">Register</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
@@ -94,7 +95,7 @@
                     </p>
                     <p>
                         <a class="btn btn-default" role="button"
-                           data-toggle="modal" data-target="#registerModal">
+                           data-toggle="modal" data-target="#register-modal">
                             Register now &raquo;</a>
                     </p>
                 </div>
@@ -109,7 +110,7 @@
                     </p>
                     <p>
                         <a class="btn btn-default" role="button"
-                           data-toggle="modal" data-target="#directionsModal">
+                           data-toggle="modal" data-target="#directions-modal">
                             Get directions &raquo;</a>
                     </p>
                 </div>
@@ -193,20 +194,24 @@
     <h2 id="sponsors" class="full-weight">Sponsors</h2>
     <div class="sponsors">
         <div class="row">
-            <div class="col-sm-3">
-                <a href="http://google.com">
+            <div class="col-sm-4">
+                <a href="http://github.com" target="_blank">
+                    <img class="github" alt="Github" src="img/github.png"></a>
+            </div>
+            <div class="col-sm-4">
+                <a href="http://google.com" target="_blank">
                     <img class="google" alt="Google" src="img/google.png"></a>
             </div>
-            <div class="col-sm-3">
-                <a href="http://www.ntst.com/">
+            <div class="col-sm-4">
+                <a href="http://ntst.com/" target="_blank">
                     <img class="ntst" alt="NTST" src="img/ntst.png"></a>
             </div>
-            <div class="col-sm-3">
-                <a href="http://studentaffairs.stonybrook.edu/caps/index.html">
+            <div class="col-sm-4">
+                <a href="http://studentaffairs.stonybrook.edu/caps/index.html" target="_blank">
                     <img class="caps" alt="CAPS" src="img/caps.png"></a>
             </div>
-            <div class="col-sm-3">
-                <a href="http://studentaffairs.stonybrook.edu/rec/">
+            <div class="col-sm-4">
+                <a href="http://studentaffairs.stonybrook.edu/rec/" target="_blank">
                     <img class="campus_rec" alt="Campus Recreation" src="img/campus_rec.jpg"></a>
             </div>
         </div>
@@ -242,23 +247,25 @@
     </footer>
 </div>
 
-<div id="registerModal" class="modal fade" role="dialog">
+<div id="register-modal" class="modal fade" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
+            <h3>Register for HackHealth 2016</h3>
             <div>
                 <form role="form" method="post" class="register-form">
                     <div class="form-group">
-                        <label for="name">Name:</label>
+                        <label for="name">Name</label>
                         <input autofocus type="text" class="form-control" id="name" name="name" required aria-required="true">
                     </div>
                     <div class="form-group">
-                        <label for="email">Email address:</label>
+                        <label for="email">Email address</label>
                         <input type="email" class="form-control" id="email" name="email" required aria-required="true">
                     </div>
                     <div class="form-group">
-                        <label for="resume">Resume (PDF):</label>
+                        <label for="resume">Resume (PDF format)</label>
                         <input type="file" class="form-control" id="resume" name="resume" required aria-required="true">
                     </div>
+                    <hr>
                     <fieldset>
                         <div class="title">Gender</div>
                         <div class="radio">
@@ -275,6 +282,7 @@
                         </div>
                         <label for="gender" class="error" style="display:none;"></label>
                     </fieldset>
+                    <hr>
                     <fieldset>
                         <div class="title">Year</div>
                         <div class="radio">
@@ -294,6 +302,7 @@
                         </div>
                         <label for="year" class="error" style="display:none;"></label>
                     </fieldset>
+                    <hr>
                     <fieldset>
                     <div class="title">T-Shirt Size</div>
                         <div class="radio">
@@ -313,6 +322,7 @@
                         </div>
                         <label for="tshirt" class="error" style="display:none;"></label>
                     </fieldset>
+                    <hr>
                     <fieldset>
                         <div class="title">Is this your first Hackathon?</div>
                         <div class="radio">
@@ -323,8 +333,9 @@
                         </div>
                         <label for="first_hackathon" class="error" style="display:none;"></label>
                     </fieldset>
-                    <div class="title">If not, how many have you been to?</div>
+                    <div class="title2">If not, how many have you been to?</div>
                     <input type="text" class="form-control number-input under-label" maxlength="4" name="num_hackathons">
+                    <hr>
                     <fieldset>
                         <div class="title">Will your hack have a health theme?</div>
                         <div class="radio">
@@ -347,10 +358,12 @@
                         </div>
                         <label for="theme" class="error" style="display:none;"></label>
                     </fieldset>
+                    <hr>
                     <div class="title">What do you want to work on?</div>
                     <div class="subtitle">Be as specific or general as you want</div>
-                    <input type="text" class="form-control under-label" name="idea" maxlength="140" required aria-required="true">
+                    <input type="text" class="form-control under-label" name="idea" maxlength="140">
                     <div class="submit-btn-container">
+                        <div id="registration-error" class="error" style="display:none;"></div>
                         <button type="submit" class="btn btn-default">Submit registration</button>
                     </div>
                 </form>
@@ -359,7 +372,17 @@
     </div>
 </div>
 
-<div id="directionsModal" class="modal fade" role="dialog">
+<div id="confirm-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <h3>Thank you for registering!</h3>
+            <p>You will receive a confirmation email shortly.</p>
+            <button class="btn btn-success" type="button" data-dismiss="modal">Okay!</button>
+        </div>
+    </div>
+</div>
+
+<div id="directions-modal" class="modal fade" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12060.614730614372!2d-73.1233889!3d40.9123761!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x734c1ca56abdcc85!2sStony+Brook+University!5e0!3m2!1sen!2sus!4v1467834041115"
