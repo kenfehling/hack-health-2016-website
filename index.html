@@ -263,7 +263,7 @@
                     </div>
                     <div class="form-group">
                         <label for="resume">Resume (PDF format)</label>
-                        <input type="file" class="form-control" id="resume" name="resume" required aria-required="true">
+                        <input type="file" class="form-control" id="resume" name="resume">
                     </div>
                     <hr>
                     <fieldset>
@@ -304,7 +304,7 @@
                     </fieldset>
                     <hr>
                     <fieldset>
-                    <div class="title">T-Shirt Size</div>
+                        <div class="title">T-Shirt Size</div>
                         <div class="radio">
                             <label><input type="radio" name="tshirt" value="XS" required aria-required="true">XS</label>
                         </div>
@@ -321,6 +321,28 @@
                             <label><input type="radio" name="tshirt" value="XL">XL</label>
                         </div>
                         <label for="tshirt" class="error" style="display:none;"></label>
+                    </fieldset>
+                    <hr>
+                    <fieldset>
+                        <div class="title">Dietary restrictions</div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="diet" value="Vegetarian" required aria-required="true">Vegetarian</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="diet" value="Vegan">Vegan</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="diet" value="Kosher">Kosher</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="diet" value="Halal">Halal</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="diet" value="Gluten-free">Gluten-free</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="diet" value="Dairy-free">Dairy-free</label>
+                        </div>
                     </fieldset>
                     <hr>
                     <fieldset>
@@ -362,6 +384,9 @@
                     <div class="title">What do you want to work on?</div>
                     <div class="subtitle">Be as specific or general as you want</div>
                     <input type="text" class="form-control under-label" name="idea" maxlength="140">
+                    <hr>
+                    <div class="title">Any other questions or concerns?</div>
+                    <input type="text" class="form-control under-label" name="other" maxlength="140">
                     <div class="submit-btn-container">
                         <div id="registration-error" class="error" style="display:none;"></div>
                         <button type="submit" class="btn btn-default">Submit registration</button>

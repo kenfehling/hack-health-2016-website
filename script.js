@@ -21,7 +21,6 @@ function setupForm($form, path, callback) {
     $form.validate({
         rules: {
             resume: {
-                required: true,
                 extension: 'pdf'
 
             }
