@@ -2,6 +2,7 @@
 @nav-bg-color: #be715d;
 @nav-text-color: darken(@nav-bg-color, 40%);
 @nav-text-hover-color: darken(@nav-text-color, 15%);
+@header-bg-color: #1E1E1E;
 @wwww-text-color: #D6D6D6;
 @description-bg-color: @nav-bg-color;
 @description-text-color: @text-color;
@@ -74,10 +75,15 @@ body {
 }
 
 header {
-  height: 231px;
-  background: #1E1E1E url('img/HackHealthBanner.png') no-repeat center;
-  opacity: 0.7;
   margin-bottom: 30px;
+  opacity: 0.7;
+  background-color: @header-bg-color;
+  #banner {
+    height: 20rem;
+    margin: 0 5%;
+    background: @header-bg-color url('img/HackHealthBanner.png') no-repeat center;
+    background-size: contain;
+  }
 }
 
 a, a:hover {
