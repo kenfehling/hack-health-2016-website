@@ -1,8 +1,11 @@
 @text-color: #2B2B2B;
-@nav-bg-color: #A77;
+@nav-bg-color: #be715d;
 @nav-text-color: darken(@nav-bg-color, 40%);
 @nav-text-hover-color: darken(@nav-text-color, 15%);
+@header-bg-color: #1E1E1E;
 @wwww-text-color: #D6D6D6;
+@description-bg-color: @nav-bg-color;
+@description-text-color: @text-color;
 @schedule-bg-color: lighten(@nav-bg-color, 15%);
 @bottom-divider-color: lighten(@schedule-bg-color, 10%);
 @bottom-bg-color: lighten(@nav-bg-color, 33%);
@@ -26,7 +29,7 @@ body {
 
 /* Customize container */
 @media (min-width: 768px) {
-  .jumbotron .container, .content .container {
+  .content .container {
     max-width: 730px;
   }
 }
@@ -71,9 +74,16 @@ body {
   }
 }
 
-.jumbotron {
-  opacity: 0.6;
-  background-color: #EFF;
+header {
+  margin-bottom: 30px;
+  opacity: 0.7;
+  background-color: @header-bg-color;
+  #banner {
+    height: 20rem;
+    margin: 0 5%;
+    background: @header-bg-color url('img/HackHealthBanner.png') no-repeat center;
+    background-size: contain;
+  }
 }
 
 a, a:hover {
@@ -102,6 +112,13 @@ h2 {
     margin: auto;
   }
 
+  .btn-pink {
+    @pink: #DC8387;
+    color: #000;
+    border-color: @pink;
+    background-image: linear-gradient(to bottom, lighten(@pink, 5%) 0, darken(@pink, 5%) 100%);
+  }
+
   .wwww {
     .row>div {
       margin-bottom: 26px;
@@ -109,13 +126,16 @@ h2 {
   }
   .description {
     max-width: 600px;
-    background-color: rgba(100, 50, 50, 0.5);
+    background-color: @description-bg-color;
+    opacity: 0.85;
+    color: @description-text-color;
     border-radius: 8px;
     text-align: left;
     margin: 40px auto 10px auto;
     padding: 18px 20px 4px 22px;
 
     blockquote {
+      border-left-color: @description-text-color;
       font-weight: 300;
     }
   }
