@@ -185,15 +185,37 @@ h2 {
     margin: 10px 5px;
     padding: 10px;
   }
-  .ntst, .fireeye {
-    margin: 0;
-    padding: 0;
+  @media (min-width: 768px) {
+    .ntst, .fireeye {
+      padding: 0;
+    }
+  }
+  @media (max-width: 767px) {
+    .ntst, .fireeye {
+      min-width: 50px;
+      max-width: 200px;
+      min-height: 75px;
+      max-height: 150px;
+    }
+    .ntst {
+      margin-bottom: 0;
+    }
+    .fireeye {
+      margin-top: 0;
+    }
+  }
+  .namecheap {
+    padding-top: -15px;
+    padding-bottom: 15px;
   }
   .google {
     padding-top: 15px;
   }
   .twilio {
-    padding-top: 5px;
+    padding-top: 11px;
+  }
+  .caps, .campus_rec {
+    padding-top: 20px;
   }
 }
 
