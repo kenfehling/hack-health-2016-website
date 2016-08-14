@@ -4,7 +4,7 @@
 @nav-text-hover-color: darken(@nav-text-color, 15%);
 @header-bg-color: #1E1E1E;
 @wwww-text-color: #D6D6D6;
-@description-bg-color: @nav-bg-color;
+@description-bg-color: lighten(@nav-bg-color, 8%);
 @description-text-color: @text-color;
 @schedule-bg-color: lighten(@nav-bg-color, 15%);
 @bottom-divider-color: lighten(@schedule-bg-color, 9%);
@@ -135,7 +135,7 @@ h2 {
     background-color: @description-bg-color;
     opacity: 0.92;
     color: @description-text-color;
-    border-radius: 8px;
+    border-radius: 5px;
     text-align: left;
     margin: 40px auto 10px auto;
     padding: 18px 20px 4px 22px;
@@ -169,7 +169,7 @@ h2 {
 
     td:first-child {
       background-color: @schedule-bg-color;
-      padding: 5px 9px 5px 13px;
+      padding: 5px 10px 5px 13px;
       white-space: nowrap;
       font-weight: 500;
     }
